@@ -25,4 +25,4 @@ Active Robots Screen </br>
 <img src="https://github.com/ErnestoOrtegaHernandez/RobotApp/blob/main/activeRobots.png" width="800"> </br>
 
 Manage Robots </br>
-<img src="https://github.com/ErnestoOrtegaHernandez/RobotApp/blob/main/manageRobots.png" width="800"> </br>
+<img src="https://github.com/ErnestoOrtegaHernandez/RobotApp/blob/main/manage.png" width="800"> </br>
