@@ -25,7 +25,7 @@ Active Robots Screen </br>
 <img src="https://github.com/ErnestoOrtegaHernandez/RobotApp/blob/main/activeRobots.png" width="800"> </br>
 
 Manage Robots </br>
-<img src="https://github.com/ErnestoOrtegaHernandez/RobotApp/blob/main/manage.png" width="800"> </br>
+<img src="https://github.com/ErnestoOrtegaHernandez/RobotApp/blob/main/manage_robots.png" width="800"> </br>
 
 Filterable Error Reports </br>
 <img src="https://github.com/ErnestoOrtegaHernandez/RobotApp/blob/main/errorReports.png" width="800"> </br>
