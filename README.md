@@ -29,3 +29,6 @@ Manage Robots </br>
 
 Filterable Error Reports </br>
 <img src="https://github.com/ErnestoOrtegaHernandez/RobotApp/blob/main/errorReports.png" width="800"> </br>
+
+Summary </br>
+<img src="https://github.com/ErnestoOrtegaHernandez/RobotApp/blob/main/Summary.png" width="800"> </br>
