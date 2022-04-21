@@ -2,18 +2,18 @@ const express = require('express')
 const app = express()
 const port = 3000
 const fs = require('fs')
-let robotData = {
-  robotId: 1,
-  errors: [
-    {
-      task: 'assembly',
-      date: ''
-    }
-  ]
-};
+const errorData = require('./errors.json')
+const cors = require('cors')
+
+
+app.use(cors())
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('<h1>Ready for requests...</h1>')
+})
+
+app.get('/errors', (req, res) => {
+  res.send(errorData);
 })
 
 app.listen(port, () => {
