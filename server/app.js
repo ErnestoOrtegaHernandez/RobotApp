@@ -2,7 +2,8 @@ const express = require('express')
 const app = express()
 const port = 3000
 const fs = require('fs')
-const errorData = require('./errors.json')
+let errorData = require('./errors.json')
+let statusData = require('./status.json')
 const cors = require('cors')
 
 
@@ -14,6 +15,10 @@ app.get('/', (req, res) => {
 
 app.get('/errors', (req, res) => {
   res.send(errorData);
+})
+
+app.get('/status', (req, res) => {
+  res.send(statusData);
 })
 
 app.listen(port, () => {
