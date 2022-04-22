@@ -30,11 +30,13 @@ const styles = StyleSheet.create({
   reekon: {
     color: '#fff',
     margin: '.25em',
-    fontSize: '1.25em'
+    fontSize: '1.25em',
+    fontWeight: 'bold'
   },
   title: {
     fontSize: '1.75em',
     color: '#fff',
-    margin: '.25em'
+    margin: '.25em',
+    fontWeight: 'bold'
   }
 });
