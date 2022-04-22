@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React, {useState} from 'react';
+import React, {useState , useEffect} from 'react';
 import { StyleSheet, Text, View, Button, TextInput, NavigationContainer } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -9,6 +9,10 @@ export default function Home({navigation}) {
   const [showSignUpFields, setShowSignUpFields] = useState(0);
   const [userOrg, setUserOrg] = useState('');
   const [userEmail, setUserEmail] = useState('');
+
+  useEffect(() => {
+    navigation.setOptions({headerShown: false});
+  }, [])
 
   return (
     <View style={styles.container}>

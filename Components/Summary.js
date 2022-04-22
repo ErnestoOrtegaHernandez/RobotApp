@@ -58,6 +58,7 @@ export default function Summary({navigation}) {
 
 
   useEffect(() => {
+    navigation.setOptions({headerShown: false});
     getSummaryInfo();
 
   }, [])

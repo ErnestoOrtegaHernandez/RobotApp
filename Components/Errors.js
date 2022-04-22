@@ -20,6 +20,7 @@ export default function Errors({navigation}) {
   }
 
   useEffect(() => {
+    navigation.setOptions({headerShown: false});
     getErrorReport();
 
   }, [])

@@ -1,11 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, {useEffect, useState}from 'react';
 import { StyleSheet, Text, View, Button, TextInput, NavigationContainer } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Header from './Header';
 import Footer from './Footer';
 
 export default function Active({navigation}) {
+
+  useEffect(() => {
+    navigation.setOptions({headerShown: false});
+
+  }, [])
+
   return (
     <>
       <Header navigation = {navigation} title = {'Active Robots'}/>
@@ -15,6 +21,7 @@ export default function Active({navigation}) {
     </>
   );
 }
+
 
 const styles = StyleSheet.create({
   active: {
