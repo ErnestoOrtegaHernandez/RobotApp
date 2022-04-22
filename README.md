@@ -1,5 +1,7 @@
 # Reekon Take Home Challenge
 
+[Deployed link](http://ec2-54-208-34-110.compute-1.amazonaws.com)
+
 # Challenge:
 The intent of this project is to develop an MVP version of a hypothetical product: an application to manage a squadron of Robotic Assistants to help construction workers. </br>
 The general targets are having the ability to do the following: </br>
@@ -30,7 +32,7 @@ The active robot screen shows the location of all active robots, their task, and
 
 Manage Robots </br>
 <img src="https://github.com/ErnestoOrtegaHernandez/RobotApp/blob/main/UI_wireframes/manage_robots.png" width="800"> </br>
-The manage robot screen allows you to view all available robots on the job site, their battery %, and status (green = available, red = unavailable low battery, orange = unavailable, task in operation). A user can drag and drop a task to an available robot to begin a task. to cancel/stop a task, a user can tap on the robot with an orange status, a pop up will confirm cancellation, upon clicking yes, it will cancel the current task.
+The manage robot screen allows you to view all available robots on the job site, their battery %, and status (green = available, red = unavailable low battery, orange = unavailable, task in operation). A user can drag and drop a task to an available robot to begin a task. to cancel/stop a task, a user can tap on the robot with an orange status, a pop up will confirm cancellation, upon clicking yes, it will cancel the current task. (changed implementation in conclusion)
 
 Filterable Error Reports </br>
 <img src="https://github.com/ErnestoOrtegaHernandez/RobotApp/blob/main/UI_wireframes/errorReports.png" width="800"> </br>
@@ -38,6 +40,9 @@ The error reports page shows errors with robot id, error type, date/time of erro
 
 Summary </br>
 <img src="https://github.com/ErnestoOrtegaHernandez/RobotApp/blob/main/UI_wireframes/Summary.png" width="800"> </br>
-Summary shows a scrollview with list of robots on the job site, what their current task is, their completion, and the amount of times an error has occured over a given time frame. tapping the errors column header a user will be prompted to put in a date.
+Summary shows a scrollview with list of robots on the job site, what their current task is, their completion, and the amount of times an error has occured over a given time frame.
 
 Note: all pages with Reekon in the upper left corner will have the ability to click on it to navigate to the main menu.
+
+# Implementation - Tools used: React native, Node.js, Express, AWS EC2
+The first thing you may notice is that the login authentication doesn't work as authentication should, that is correct. I intentionally left the authentication logic out due to various reasons, mainly this was a mockup. I mimicked data by having json data exist in the server directory, this would serve to mimick CRUD operations. The json files represent data from either the Reekon VPC or the robot api that gets combined and sent the front end. The active robots page is static for now but I did have a few ideas of mocking up that data that time didn't allow for; namely, having and open connection to another server that mimicks coordinates around a set area. this set area would be used to define a room on the floor plan and the red marker would move around in conjunction to those coordinates. The manage robots list was reduced to single list, instead of dragging and dropping a task, a user can tap on a robot that has a minimum of 25% battery life or more and assign/cancel a task via a Modal. The error reports are sorting as intended by clicking the up and down arrows. The summary page correctly reflects when a task is changed/canceled. I didn't have the opportuniy to unit/integration test, but this would have been the next step but I decided to atleast have something live by eod 4/22. If you've read this far I want to thank you for your time and an opportunity to present this mockup.
