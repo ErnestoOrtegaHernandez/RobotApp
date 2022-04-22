@@ -1,8 +1,8 @@
 const express = require('express')
 const app = express()
-const port = 3000
 const fs = require('fs')
-
+require('dotenv').config();
+const port = process.env.PORT || 3000
 let errorData = require('./errors.json')
 let statusData = require('./status.json')
 const cors = require('cors')
@@ -51,5 +51,5 @@ app.post('/status', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Robot app listening on port ${port}`)
 })

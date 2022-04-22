@@ -6,12 +6,13 @@ import Header from './Header';
 import Footer from './Footer';
 import TriangleSymbol from './TriangleSymbols';
 import ErrorEntry from './ErrorEntry';
+import url from '../api.js';
 
 export default function Errors({navigation}) {
   const [errorDetails, setErrorDetails] = useState([]);
 
   const getErrorReport = () => {
-    fetch('http://localhost:3000/errors', {
+    fetch(url.url + ':3000/errors', {
       mode: 'cors'
     })
     .then(res => res.json())

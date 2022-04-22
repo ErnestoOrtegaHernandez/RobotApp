@@ -6,6 +6,7 @@ import Header from './Header';
 import Footer from './Footer';
 import ManageEntry from './ManageEntry';
 import Task from './TaskEntry';
+import url from '../api.js';
 
 
 export default function Manage({navigation}) {
@@ -19,13 +20,13 @@ export default function Manage({navigation}) {
   const getRobotStatus = () => {
     let robotsStatus;
     let tasksList;
-    fetch('http://localhost:3000/status', {
+    fetch(url.url + ':3000/status', {
       mode: 'cors'
     })
     .then(res => res.json())
     .then(data => robotsStatus = data)
     .then(()=>{
-      fetch('http://localhost:3000/tasks', {
+      fetch( url.url + ':3000/tasks', {
       mode: 'cors'
       })
       .then(res => res.json())
@@ -49,7 +50,7 @@ export default function Manage({navigation}) {
   }
 
   const handlePost = () => {
-    fetch('http://localhost:3000/status', {
+    fetch(url.url +':3000/status', {
       method: 'POST',
       mode: 'cors',
       headers: {
@@ -67,11 +68,6 @@ export default function Manage({navigation}) {
     })
     .catch(err => console.log(err));
   }
-
-  console.log(tasks, 'tasks')
-  console.log(robotStatus, 'robotStatus')
-  console.log(pairRobot, 'robotid')
-  console.log(pairTask, 'pair task')
 
 
   return (

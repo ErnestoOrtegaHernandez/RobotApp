@@ -13,6 +13,7 @@ export default function Home({navigation}) {
   useEffect(() => {
     navigation.setOptions({headerShown: false});
   }, [])
+  console.log('Hello Reekon Team!')
 
   return (
     <View style={styles.container}>

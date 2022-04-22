@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Header from './Header';
 import Footer from './Footer';
 import SummaryEntry from './SummaryEntry';
+import url from '../api.js';
 
 export default function Summary({navigation}) {
 
@@ -14,7 +15,7 @@ export default function Summary({navigation}) {
     let errorData;
     let summaryData;
     let combinedData = [];
-    fetch('http://localhost:3000/status', {
+    fetch( url.url +':3000/status', {
       mode: 'cors'
     })
     .then(res => res.json())
@@ -22,7 +23,7 @@ export default function Summary({navigation}) {
       summaryData = data;
     })
     .then(() => {
-      fetch('http://localhost:3000/errors', {
+      fetch(url.url + ':3000/errors', {
       mode: 'cors'
       })
       .then(res => res.json())
@@ -30,8 +31,7 @@ export default function Summary({navigation}) {
         errorData = data
       })
       .then(() => {
-        console.log(errorData);
-        console.log(summaryData)
+
         for(let i = 0; i < summaryData.length; i++) {
         let entry = {
           robotId: summaryData[i].robotId,
@@ -47,7 +47,7 @@ export default function Summary({navigation}) {
           }
           combinedData.push(entry);
         }
-        console.log(combinedData)
+
         setCompiledData(combinedData);
       })
       .catch(err => console.log(err));
