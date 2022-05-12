@@ -1,7 +1,5 @@
 # Reekon Take Home Challenge
 
-[Deployed link](http://ec2-54-208-34-110.compute-1.amazonaws.com)
-
 # Challenge:
 The intent of this project is to develop an MVP version of a hypothetical product: an application to manage a squadron of Robotic Assistants to help construction workers. </br>
 The general targets are having the ability to do the following: </br>
@@ -49,4 +47,4 @@ The first thing you may notice is that the login authentication doesn't work as 
 
 # Run locally
 To run locall you will need to clone this repo, in the RobotApp/ directory, npm install and also create an api.js file with a link to local host as such:
-const url = {url:'http://localhost'} export default url; </br> you will also need to install expo-cli globally, to run the backend, switch the RobotApp/server/ directory, then npm install. run usingng 'node app.js'. The RobotApp is now ready to be run in the RobotApp/ directory using expo start --web.
+const url = {url:'http://localhost'} export default url; </br> you will also need to install expo-cli globally, to run the backend, switch the RobotApp/server/ directory, then npm install. run using 'node app.js'. The RobotApp is now ready to be run in the RobotApp/ directory using expo start --web.
